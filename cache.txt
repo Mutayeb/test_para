@@ -1,0 +1,53 @@
+pytest cache is a folder in our directory wherein we define a file called lastfailed and that file ensures that the test cases that failed in our last run are executed again.
+
+
+consider the python program test_module01.py that has 3 test cases:test_a1, test_a2, test_a3 an din last run test_a1 and test_a3 passed and  test_a2 failed. 
+ 
+so, content in lastfailed:
+
+
+{
+	"test_module01.py::test_a2"
+
+}
+in tetrminal , we run this file with commands: 
+ pytest --lf: runs only test cases that failed in last run 
+pytest --ff:(first failed): runs the failures first and then rest of tests.
+
+Stepwise : using stepwise run, we ensure that when we run pytest cases, during the execution when first failure is encountered it stops running the test cases.
+
+pytest --sw or --stepwise
+
+
+in every folder fo the module , we should define a  __init__.py file ,it allows us to have to have same file names in different folders
+
+assert 1 alwasy passes as it is assert True
+assert 0 alwasy fails
+
+assert <anything other than zero > will pass
+
+
+def test_od:
+	assert 3-1*4/2 == 4
+	asset "py" in "this is pytest"
+	assert 2 in divmod(9,5)
+this will fail as python fllows bodmas and (3-1)*4/2 =1
+
+	assert (3-1)*4/2 ==4.0 [: will pass]
+	assert [1,2] in [1,2,3] will fail as ther is no sub-list [1,2] in the list [1,2,3]
+
+	assert 1 in [1,2,3] will pass
+
+
+
+def test_oz():
+    
+    assert "py" in "this is pytest"
+    assert 1 in divmod(9,5),"test failed"
+    assert str.upper("Python")=="PYTHON"
+    
+All the above assert stmt will pass as all are true BUT the best practice is that we should write only single assert stmt for 1 test case because if any of the assert  stmt is not true it will not execute the subsequent assert stmt s aftet that one.
+
+
+
+

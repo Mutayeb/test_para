@@ -1,0 +1,7 @@
+Parameterization:
+increases test coverage.
+
+@pytest.mark.parametrize('test_input',[82,70,45,50])
+def test_param01(test_input):
+	assert test_input > 50
+	

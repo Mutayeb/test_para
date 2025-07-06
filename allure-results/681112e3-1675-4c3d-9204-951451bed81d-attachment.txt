@@ -1,0 +1,6 @@
+
+ ...... indside fixture....... 
+
+
+ ...... indside test_get1....... 
+

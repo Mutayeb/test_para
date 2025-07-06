@@ -1,0 +1,4 @@
+
+ ...... indside fixture....... 
+
+['New Jersey', 'California']
